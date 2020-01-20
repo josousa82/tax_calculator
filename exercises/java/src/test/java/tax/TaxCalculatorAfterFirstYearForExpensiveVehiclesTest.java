@@ -18,7 +18,7 @@ public class TaxCalculatorAfterFirstYearForExpensiveVehiclesTest {
 
     @Before
     public void setUp() {
-        taxCalculator = new DummyTaxCalculator();
+        taxCalculator = new DefaultTaxCalculator();
     }
 
     @Test
@@ -32,7 +32,6 @@ public class TaxCalculatorAfterFirstYearForExpensiveVehiclesTest {
         Vehicle vehicle = new Vehicle(206, ELECTRIC, FIRST_OF_APRIL_2017, 50000);
         assertThat(taxCalculator.calculateTax(vehicle)).isEqualTo(310);
     }
-
     @Test
     public void subsequentYearsTaxForAlternativeFuelIfOver40K() {
         Vehicle vehicle = new Vehicle(206, ALTERNATIVE_FUEL, FIRST_OF_APRIL_2017, 50000);

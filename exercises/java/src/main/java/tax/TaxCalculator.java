@@ -8,7 +8,10 @@ abstract class TaxCalculator{
     abstract int calculateTax(Vehicle vehicle);
 
     TaxCalculator(){
-        this(LocalDate.now().getYear());
+
+        this(
+                LocalDate.now().getYear()
+        );
     }
 
     TaxCalculator(int year){
