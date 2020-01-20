@@ -19,7 +19,7 @@ public class DefaultTaxCalculator extends TaxCalculator{
     @Override
     int calculateTax(Vehicle vehicle) {
 
-       if(vehicle.getCo2Emissions() > 1 || vehicle.getCo2Emissions() < 50){
+       if(vehicle.getCo2Emissions() > 1 && vehicle.getCo2Emissions() < 50){
            return 10;
        }else if (vehicle.getCo2Emissions() > 51 && vehicle.getCo2Emissions() < 75){
            return 25;
